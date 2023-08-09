@@ -1,1 +1,1 @@
-we can use pow inbuilt function to solve this
+​
