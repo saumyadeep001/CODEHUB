@@ -1,3 +1,17 @@
+                //method 1: by pow inbuilt function 
+
+//class Solution {
+//public:
+    //double myPow(double x, int n) {
+     //   return pow(x,n);
+ //   }
+//};
+
+
+
+                 //method 2 : by binary exponertiation
+
+
 class Solution {
 public:
     
