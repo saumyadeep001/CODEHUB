@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool isValid(string s) {
-        stack<char>st;
+        stack<char>bob;
         unordered_map<char,char>mp = {
             {']','['},
             {')','('},
@@ -9,14 +9,14 @@ public:
         }; 
       for(char ch:s){
           if(ch == '(' || ch== '[' || ch =='{')
-              st.push(ch);
+              bob.push(ch);
           else
           {
-              if(st.empty() || st.top() != mp[ch])
+              if(bob.empty() || bob.top() != mp[ch])
               return false;
-              st.pop();
+              bob.pop();
           }
       }
-      return st.empty();
+      return bob.empty();
     }
 };
