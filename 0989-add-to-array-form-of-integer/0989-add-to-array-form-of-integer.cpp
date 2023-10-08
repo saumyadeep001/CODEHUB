@@ -1,8 +1,4 @@
-
-   
-
-    
-    class Solution {
+ class Solution {
 public:
     vector<int> addToArrayForm(vector<int>& num, int k) {
          int n = num.size();
