@@ -9,15 +9,15 @@ public:
             {
                 X++;
             }
-             if(operations[i] == "++X")
+             else if(operations[i] == "++X")
             {
                 ++X;
             }
-           if(operations[i] == "X--")
+            else if(operations[i] == "X--")
             {
                 X--;
             }
-             if(operations[i] == "--X")
+             else if(operations[i] == "--X")
             {
                 --X;
             }
