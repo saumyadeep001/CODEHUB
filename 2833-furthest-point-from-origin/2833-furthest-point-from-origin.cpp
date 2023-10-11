@@ -20,3 +20,27 @@ public:
         return max(l,r);
     }
 };
+
+// int l=0,r=0,blank=0;
+//         int n=moves.size();
+//         for(int i=0;i<n;i++)
+//         {
+//             if(moves[i]=='L')
+//             {
+//                 l++;
+//             }else if(moves[i]=='R')
+//             {
+//                 r++;
+//             }else{
+//                 blank++;
+//             }
+//         }
+//         if(l==r)
+//         {
+//             return blank;
+//         }else if(l<r)
+//         {
+//             return r-l+blank;
+//         }else {
+//             return l-r+blank;
+//         }
