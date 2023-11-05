@@ -1,12 +1,21 @@
 class Solution {
 public:
     int fib(int n) {
-        
-        if(n==0 || n == 1)
+        if (n <= 1)
             return n;
-        
-        int ans = fib(n-1) + fib(n-2);
-        return ans;
-        
+
+        vector<int> dp(n + 1, -1); 
+        dp[0] = 0;
+        dp[1] = 1;
+
+        return helper(n, dp);
+    }
+
+    int helper(int n, vector<int>& dp) {
+        if (dp[n] != -1)
+            return dp[n];
+
+        dp[n] = helper(n - 1, dp) + helper(n - 2, dp);
+        return dp[n];
     }
 };
