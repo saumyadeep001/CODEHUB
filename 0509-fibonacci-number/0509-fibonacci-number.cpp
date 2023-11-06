@@ -9,6 +9,9 @@ public:
     
     int topDownSol(int n ,vector<int>& dp){
          if(n==1 or n==0) return n;
+        
+        if(dp[n] != -1) return dp[n];
+        
         dp[n] =topDownSol(n-1,dp) + topDownSol(n-2,dp);
          return dp[n];
     }
