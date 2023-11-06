@@ -1,17 +1,24 @@
 class Solution {
 public:
+    
+    int recSol(int n){
+     if(n==1 or n==0) return n;
+        return recSol(n-1) + recSol(n-2);
+}
+    
+    
+    int topDownSol(int n ,vector<int>& dp){
+         if(n==1 or n==0) return n;
+        return topDownSol(n-1,dp) + topDownSol(n-2,dp);
+
+    }
+    
+    
     int fib(int n) {
-        if (n <= 1)
-            return n;
-
-        vector<int> dp(n + 1);
-        dp[0] = 0;
-        dp[1] = 1;
-
-        for (int i = 2; i <= n; i++) {
-            dp[i] = dp[i - 1] + dp[i - 2];
-        }
-
-        return dp[n];
+        // int ans = recSol(n);
+        // return ans;
+        
+        vector<int> dp(n+1, -1);
+        return topDownSol(n, dp);
     }
 };
