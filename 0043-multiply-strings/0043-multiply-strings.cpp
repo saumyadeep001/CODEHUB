@@ -3,7 +3,7 @@ public:
     string multiply(string num1, string num2) {
          int m = num1.size();
     int n = num2.size();
-    std::vector<int> result(m + n, 0);
+    vector<int> result(m + n, 0);
 
     for (int i = m - 1; i >= 0; --i) {
         for (int j = n - 1; j >= 0; --j) {
