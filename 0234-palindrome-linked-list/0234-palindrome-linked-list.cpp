@@ -38,19 +38,39 @@
 
 
 
- class Solution {
+//  class Solution {
+// public:
+//     ListNode* temp;
+    
+//     bool check(ListNode* head) {
+//         if (NULL == head) return true;
+//         bool res = check(head->next) & (temp->val == head->val);
+//         temp = temp->next;
+//         return res;
+//     }
+    
+//     bool isPalindrome(ListNode* head) {
+//         temp = head;
+//         return check(head);
+//     }
+// };
+
+class Solution {
 public:
-    ListNode* temp;
-    
-    bool check(ListNode* head) {
-        if (NULL == head) return true;
-        bool res = check(head->next) & (temp->val == head->val);
-        temp = temp->next;
-        return res;
-    }
-    
+
     bool isPalindrome(ListNode* head) {
-        temp = head;
-        return check(head);
+        stack<int>s;
+        ListNode *temp=head;
+        while(temp!=NULL){
+            s.push(temp->val);
+            temp=temp->next;
+        }
+        while(head!=NULL && !s.empty())
+        {
+            if(s.top()!=head->val) return false;
+            head=head->next;
+            s.pop();
+        }
+        return true;
     }
 };
