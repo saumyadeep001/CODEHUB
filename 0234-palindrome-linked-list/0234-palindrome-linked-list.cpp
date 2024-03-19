@@ -8,27 +8,49 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-class Solution {
+
+
+
+// class Solution {
+// public:
+//     bool isPalindrome(ListNode* head) {
+//         vector<int> values;
+//     ListNode* current = head;
+
+//     while (current != nullptr) {
+//         values.push_back(current->val);
+//         current = current->next;
+//     }
+
+//     int left = 0;
+//     int right = values.size() - 1;
+//     while (left < right) {
+//         if (values[left] != values[right]) {
+//             return false; 
+//         }
+//         left++;
+//         right--;
+//     }
+
+//     return true; 
+//     }
+// };
+
+
+
+ class Solution {
 public:
+    ListNode* temp;
+    
+    bool check(ListNode* head) {
+        if (NULL == head) return true;
+        bool res = check(head->next) & (temp->val == head->val);
+        temp = temp->next;
+        return res;
+    }
+    
     bool isPalindrome(ListNode* head) {
-        vector<int> values;
-    ListNode* current = head;
-
-    while (current != nullptr) {
-        values.push_back(current->val);
-        current = current->next;
-    }
-
-    int left = 0;
-    int right = values.size() - 1;
-    while (left < right) {
-        if (values[left] != values[right]) {
-            return false; 
-        }
-        left++;
-        right--;
-    }
-
-    return true; 
+        temp = head;
+        return check(head);
     }
 };
