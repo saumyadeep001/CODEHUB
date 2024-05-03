@@ -14,7 +14,7 @@ public:
 
             if (a < b) return -1;
             else if (a > b) return 1;
-
+            else
             a = b = 0;
             i++;
             j++;
