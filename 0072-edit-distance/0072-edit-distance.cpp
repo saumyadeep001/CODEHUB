@@ -6,9 +6,13 @@ public:
         
         if (dp[i][j] != -1) return dp[i][j];
         
-        if(str1[i] == str2[j])  dp[i][j] = mem(str1, str2, i - 1, j - 1, dp);
-        else dp[i][j] = 1 + min({mem(str1, str2, i - 1, j, dp),mem(str1, str2, i, j - 1, dp),mem(str1, str2, i - 1, j - 1, dp)}); 
-        
+        if (str1[i] == str2[j]) {
+            dp[i][j] = mem(str1, str2, i - 1, j - 1, dp);
+        } else {
+            dp[i][j] = 1 + min({mem(str1, str2, i - 1, j, dp), // Delete
+                                mem(str1, str2, i, j - 1, dp), // Insert
+                                mem(str1, str2, i - 1, j - 1, dp)}); // Replace
+        }
         return dp[i][j];
     }
     
