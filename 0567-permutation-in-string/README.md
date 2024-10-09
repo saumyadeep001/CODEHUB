@@ -1,26 +1,26 @@
-<h2><a href="https://leetcode.com/problems/permutation-in-string/">567. Permutation in String</a></h2><h3>Medium</h3><hr><div><p>Given two strings <code>s1</code> and <code>s2</code>, return <code>true</code> if <code>s2</code> contains a <span data-keyword="permutation-string">permutation</span> of <code>s1</code>, or <code>false</code> otherwise.</p>
+<h2><a href="https://leetcode.com/problems/permutation-in-string/">567. Permutation in String</a></h2><h3>Medium</h3><hr><div style="user-select: auto;"><p style="user-select: auto;">Given two strings <code style="user-select: auto;">s1</code> and <code style="user-select: auto;">s2</code>, return <code style="user-select: auto;">true</code> if <code style="user-select: auto;">s2</code> contains a <span data-keyword="permutation-string" style="user-select: auto;">permutation</span> of <code style="user-select: auto;">s1</code>, or <code style="user-select: auto;">false</code> otherwise.</p>
 
-<p>In other words, return <code>true</code> if one of <code>s1</code>'s permutations is the substring of <code>s2</code>.</p>
+<p style="user-select: auto;">In other words, return <code style="user-select: auto;">true</code> if one of <code style="user-select: auto;">s1</code>'s permutations is the substring of <code style="user-select: auto;">s2</code>.</p>
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+<p style="user-select: auto;">&nbsp;</p>
+<p style="user-select: auto;"><strong class="example" style="user-select: auto;">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> s1 = "ab", s2 = "eidbaooo"
-<strong>Output:</strong> true
-<strong>Explanation:</strong> s2 contains one permutation of s1 ("ba").
+<pre style="user-select: auto;"><strong style="user-select: auto;">Input:</strong> s1 = "ab", s2 = "eidbaooo"
+<strong style="user-select: auto;">Output:</strong> true
+<strong style="user-select: auto;">Explanation:</strong> s2 contains one permutation of s1 ("ba").
 </pre>
 
-<p><strong class="example">Example 2:</strong></p>
+<p style="user-select: auto;"><strong class="example" style="user-select: auto;">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> s1 = "ab", s2 = "eidboaoo"
-<strong>Output:</strong> false
+<pre style="user-select: auto;"><strong style="user-select: auto;">Input:</strong> s1 = "ab", s2 = "eidboaoo"
+<strong style="user-select: auto;">Output:</strong> false
 </pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+<p style="user-select: auto;">&nbsp;</p>
+<p style="user-select: auto;"><strong style="user-select: auto;">Constraints:</strong></p>
 
-<ul>
-	<li><code>1 &lt;= s1.length, s2.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>s1</code> and <code>s2</code> consist of lowercase English letters.</li>
+<ul style="user-select: auto;">
+	<li style="user-select: auto;"><code style="user-select: auto;">1 &lt;= s1.length, s2.length &lt;= 10<sup style="user-select: auto;">4</sup></code></li>
+	<li style="user-select: auto;"><code style="user-select: auto;">s1</code> and <code style="user-select: auto;">s2</code> consist of lowercase English letters.</li>
 </ul>
 </div>
