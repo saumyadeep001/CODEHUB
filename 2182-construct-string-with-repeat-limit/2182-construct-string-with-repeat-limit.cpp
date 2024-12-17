@@ -15,15 +15,15 @@ public:
         
         while (!pq.empty()) {
 		
-            auto top = pq.top(); pq.pop();  // top contains lexicographically greatest character
+            auto top = pq.top(); pq.pop();  
             here :
-            int lim = min(top.second, repeatLimit); // lim is number of times top can be added
+            int lim = min(top.second, repeatLimit); 
             top.second -= lim;
 			
             while (lim--)   res.push_back(top.first);
             if (top.second > 0) {
-                if (pq.empty()) return res; // if we dont get next greatest character then we cannot use remaining characters so return res
-                auto next = pq.top(); pq.pop(); // next contains lexicographically greatest character smaller than top
+                if (pq.empty()) return res; 
+                auto next = pq.top(); pq.pop(); 
                 res.push_back(next.first);
                 next.second -= 1;
                 if (next.second)    pq.push(next);
